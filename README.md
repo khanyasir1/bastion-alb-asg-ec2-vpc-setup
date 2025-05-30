@@ -72,6 +72,7 @@ Use **"VPC and More"** option:
   * Private → NAT
 
 ---
+**"VPC "**
 ![ VPC ](/vpc-project-images/vpc-image.png)
 
 ### 🚀 Step 3: Create Launch Template
@@ -88,6 +89,7 @@ Use **"VPC and More"** option:
   * Outbound: Allow all
 
 ---
+**"Launch-Template "**
 ![ Launch-Template ](/vpc-project-images/luach-template-page.png)
 
 ### ⚙️ Step 4: Create Auto Scaling Group
@@ -101,7 +103,9 @@ Use **"VPC and More"** option:
 ✅ Verify: 2 EC2s in **private subnet** launched
 
 ---
+**"Auto-Scaling Group - Create "**
 ![ Auto-Scaling Group - Create](/vpc-project-images/ASG-creation.png)
+**"Auto-Scaling Group - Home "**
 ![ Auto-Scaling Group - Home ](/vpc-project-images/ASG-home.png)
 
 ### 🧩 Step 5: Bastion Host
@@ -111,6 +115,7 @@ Use **"VPC and More"** option:
 * **Security Group**: SSH (22) from your IP
 
 ---
+**"Bastion Host "**
 ![  Bastion Host ](/vpc-project-images/jump-host.png)
 
 ### 🔐 Step 6: SSH Access Flow
@@ -206,8 +211,9 @@ On each private EC2:
 
   * Protocol: `HTTP`
   * Port: `80`
-
-![  Bastion Host ](/vpc-project-images/jump-host.png)
+**"Bastion Host "**
+![  Bastion Host ](/vpc-project-images/load-balancer.png
+)
 
 #### 🎯 Create Target Group
 
@@ -242,12 +248,15 @@ http://<your-alb-dns-name>
 You should see the hosted **index.html** page!
 
 ---
+**"Load-Balancer private-subnet-01"**
 ![  private-subnet-01 ](/vpc-project-images/az-1.png)
+**"Load-Balancer private-subnet-02"**
 ![  private-subnet-01 ](/vpc-project-images/az-2.png)
 
 ## 📁 Project File Structure
 
 ```
+.
 ├── README.md
 └── vpc-project-images
     ├── 2-private-subnet-instance.png
@@ -257,6 +266,7 @@ You should see the hosted **index.html** page!
     ├── az-1.png
     ├── az-2.png
     ├── jump-host.png
+    ├── load-balancer.png
     ├── luach-template-page.png
     ├── scp.png
     └── vpc-image.png
