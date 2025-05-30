@@ -72,6 +72,7 @@ Use **"VPC and More"** option:
   * Private → NAT
 
 ---
+![ VPC ](/vpc-project-images/vpc-image.png)
 
 ### 🚀 Step 3: Create Launch Template
 
@@ -87,6 +88,7 @@ Use **"VPC and More"** option:
   * Outbound: Allow all
 
 ---
+![ Launch-Template ](/vpc-project-images/luach-template-page.png)
 
 ### ⚙️ Step 4: Create Auto Scaling Group
 
@@ -99,6 +101,8 @@ Use **"VPC and More"** option:
 ✅ Verify: 2 EC2s in **private subnet** launched
 
 ---
+![ Auto-Scaling Group - Create](/vpc-project-images/ASG-creation.png)
+![ Auto-Scaling Group - Home ](/vpc-project-images/ASG-home.png)
 
 ### 🧩 Step 5: Bastion Host
 
@@ -107,6 +111,7 @@ Use **"VPC and More"** option:
 * **Security Group**: SSH (22) from your IP
 
 ---
+![  Bastion Host ](/vpc-project-images/jump-host.png)
 
 ### 🔐 Step 6: SSH Access Flow
 
@@ -202,6 +207,8 @@ On each private EC2:
   * Protocol: `HTTP`
   * Port: `80`
 
+![  Bastion Host ](/vpc-project-images/jump-host.png)
+
 #### 🎯 Create Target Group
 
 * **Target Type**: `Instance`
@@ -235,6 +242,8 @@ http://<your-alb-dns-name>
 You should see the hosted **index.html** page!
 
 ---
+![  private-subnet-01 ](/vpc-project-images/az-1.png)
+![  private-subnet-01 ](/vpc-project-images/az-2.png)
 
 ## 📁 Project File Structure
 
